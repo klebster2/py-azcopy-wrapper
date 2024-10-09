@@ -47,7 +47,7 @@ class AzClient:
         transfer_options: AzCopyOptions,
     ) -> AzCopyJobInfo:
         """
-        Copies that data from source to destionation
+        Copies that data from source to destination
         with the transfer options specified
         """
         import re
@@ -277,8 +277,8 @@ class AzClient:
 
     def upload_data_to_remote_location(
         self,
-        src: AzRemoteSASLocation,
-        dest: AzLocalLocation,
+        src: AzLocalLocation,
+        dest: AzRemoteSASLocation,
         transfer_options: AzCopyOptions,
     ) -> AzCopyJobInfo:
         return self._copy(src=src, dest=dest, transfer_options=transfer_options)
